@@ -85,7 +85,8 @@ while (true) {
 
         if (choice === "0" || choice === null) {
             break;
-        } else if (choice === "1") {
+        } 
+        else if (choice === "1") {
             alert(
                 "ВЕРХНЯЯ ПОЛКА\n" +
                 "Вы нашли несколько стоящих на полке запылившихся книг, одна из них странно переливается в свету свечей."
@@ -108,6 +109,12 @@ while (true) {
                     "1 — Вернуться к входу\n" +
                     "0 — Завершить игру"
                 )
+                if (choice === "0" || choice === null) {
+                    break;
+                }
+                else if (choice === "1") {
+                    room = "библиотека";
+                };
             }
             else if (choice === "2") {
                     alert(
@@ -133,6 +140,37 @@ while (true) {
                             "2 — Вернуться к входу\n" +
                             "0 — Завершить игру"
                         )
+                            if (choice === "0" || choice === null) {
+                            break;
+                        } 
+                            else if (choice === "1") {
+                                const takeKey = confirm("В сундуке лежит ключ. Взять его?");
+                                if (takeKey === true) {
+                                    inventory.push("ключ");
+                                    alert("Ключ добавлен в рюкзак!");
+                                } else {
+                                    alert("Вы оставили ключ на полке.");
+                                }
+                            alert(
+                                "Ключ в инвенторе\n"+
+                                "Осталось найти магическую траву и меч"
+                            )
+                            const choice = prompt(
+                                "1 — Вернуться к входу\n" +
+                                "0 — Завершить игру"
+                            )
+                            }
+                    else if (choice === "2") {
+                        room = "бибилотека";
+                    }
+                    }
+            else if (choice === "3") {
+                room = "библиотека";
+            }
+        else if (choice === "1") {
+            room = "библиотека";
+            };
+
             } else {
                 const takeKey = confirm("В сундуке лежит ключ. Взять его?");
 
