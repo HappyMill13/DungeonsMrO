@@ -242,6 +242,8 @@ while (true) {
             room = "святилище";
         } else if (choice === "4") {
             room = "босс";
+        } else if (choice === "5") {
+            room = "вход";
         } else {
             alert("Такого прохода нет.");
         }
